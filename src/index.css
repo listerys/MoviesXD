@@ -21,6 +21,17 @@ code {
   transition: transform 450ms;
 }
 
+.movieCast{
+  width: 100px;
+  margin: 0.2rem;
+  background-color: #6e005f9a;
+  border-radius: 10px;
+  color: aliceblue;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 450ms;
+}
+
+
 .movie img {
   max-width: 100%;
   border-radius: 10px;
@@ -49,6 +60,12 @@ code {
   padding-top: 1rem;
 }
 
+.movie-info-Cast h3{
+  margin: 0px !important;
+  white-space:pre-wrap;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+}
 .movie:hover {
   transform: scale(1.08);
 }
