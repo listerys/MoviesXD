@@ -49,3 +49,12 @@
     border-color: #a0078cbe;
     cursor:initial;
 }
+
+.Overview{
+    font-size: 1rem;
+    background-color: #a0078cbe  ;
+}
+
+.CastName{
+    margin: 0mm !important;
+}
