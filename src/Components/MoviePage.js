@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './MoviePage.css';
-import Button from 'react-bootstrap/Button';
 import Movie from './Movie';
+import Cast from './Cast';
+
 const APIKEY = "?api_key=2fd99db9a55f38b3057e417bf6d2113a";
 const API = "https://api.themoviedb.org/3/movie/";
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 const SIMILAR= "/similar";
+const CREDITS= "/credits";
 
 const MoviePage = (props) => {
     const [movies, setMovies] = useState('');
@@ -14,17 +16,28 @@ const MoviePage = (props) => {
         fetch(API+props.match.params.id+SIMILAR+APIKEY)
         .then(res => res.json())
         .then(data =>{
-          console.log(data);
-          console.log(data.results);
           setSimilarMovies(data.results);
         }); 
 
     }, []);
 
+
+
+    const [credits, setCredits] = useState([]);
+    useEffect (() => { 
+      fetch(API+props.match.params.id+CREDITS+APIKEY)
+      .then(res => res.json())
+      .then(data =>{
+        setCredits(data.cast);
+      }); 
+
+  }, []);
+
     useEffect (() => { 
         fetch(API+props.match.params.id+APIKEY)
         .then(res => res.json())
         .then(data =>{
+          
           console.log(data);
           setMovies(data);
         }); 
@@ -42,24 +55,25 @@ const MoviePage = (props) => {
   <div class="col-8">
   <h1>{movies.title}</h1>
   Year Released: {movies.release_date}
-      <h2>
+
       <br/>
-          Overview
-          <br/>
-          <br/>
-          {movies.overview}
-      </h2>
-          <br/>
+      <h2>Overview      </h2>
+          <div className="Overview">{movies.overview}</div>
+
           <br/>
           Total Movie Budget: {movies.budget}
-          <br/>
           <br/>
           <div className="ratingButton">
               Total Vote Average
               <br/>
           <button type="button" class="btn btn-primary white">{movies.vote_average}/10 </button> &nbsp;<img class="staricon" src="https://www.flaticon.com/svg/static/icons/svg/929/929424.svg" alt="star"/>
+          <br/>
+            </div>
+
+  </div>        <h1 className="CastName"> <br/>Cast</h1> 
+          <div className="movie-container">
+          {credits.length > 0 && credits.map((movie) => <Cast key={movie.cast_id} {...movie} />   )}
           </div>
-  </div>
 </div>
 <h1>Similar Movies</h1>
 <div className="movie-container">
