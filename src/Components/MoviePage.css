@@ -1,5 +1,6 @@
 .posterContainer{
-    background-color: #6e005f9a;
+    position: relative;
+    background-color: #0B1221;
 }
 .posterContainer img{
     width: 100%;
@@ -8,20 +9,28 @@
   .row{
       display: flex;
       flex-wrap: wrap;
-      padding: 2rem;
+      padding-top: 0mm !important;
+      background-color: #0B1221 !important;
   }
 
 
   .col-8{
       color: white;
-      padding: 2rem;
+      padding-left: 1rem;
       padding-bottom: 4rem;
+      background-color: #0B1221 !important;
+      padding-right: 2rem;
   }
 .col-8 h1{
     margin: 0px !important;
 }
 
+.col-4{
+    background-color: #0B1221 !important;
+}
+
 .col-4 img{
+    padding-left: 2rem;
     border-radius: 15px;
     
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -38,23 +47,42 @@
 }
 
 .btn{
-    background-color: #a0078cbe  ;
-    border-color: #a0078cbe;
+    background-color: #1F305A  ;
+    border-color: #1F305A;
     padding: 0.5rem;
     font-size: 20px;
 }
 
 .btn:hover{
-    background-color: #a0078cbe  ;
-    border-color: #a0078cbe;
+    background-color: #1F305A  ;
+    border-color: #1F305A;
     cursor:initial;
 }
 
 .Overview{
+    padding: 1rem;
+    border-radius: 15px;
     font-size: 1rem;
-    background-color: #a0078cbe  ;
+    background-color: #1F305A  ;
 }
 
 .CastName{
     margin: 0mm !important;
+}
+
+.backdropImg {
+    clip: rect(400px,0px,0px,0px);
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .backdropContainer{
+        height: 450px;
+    }
+  }
+
+
+  .cast-container{
+    margin-left: 1.5rem !important;
 }
