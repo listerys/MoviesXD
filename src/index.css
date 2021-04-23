@@ -1,20 +1,18 @@
 
 body {
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #35022e;
+  background: #121C34;
 }
 
-code {
-  font-family: 'Nunito', sans-serif;
-}
+
 
 .movie{
   width: 230px;
   margin: 0.8rem;
-  background-color: #6e005f9a;
+  background-color: #1F305A;
   border-radius: 10px;
   color: aliceblue;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -24,7 +22,7 @@ code {
 .movieCast{
   width: 100px;
   margin: 0.2rem;
-  background-color: #6e005f9a;
+  background-color: #1F305A;
   border-radius: 10px;
   color: aliceblue;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -71,7 +69,7 @@ code {
 }
 
 .search__container {
-  background-color: #6e005f9a;
+  background-color: #0B1221;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,7 +79,8 @@ code {
   font-size: 50px;
   font-weight: 900;
   color: white;
-  padding-left: 1.5rem;;
+  padding-left: 1.5rem;
+  background-color: #0B1221;
 }
 
 .search__input {
