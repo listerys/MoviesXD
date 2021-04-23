@@ -70,6 +70,7 @@ const MoviePage = (props) => {
           <div className="ratingButton">
               Total Vote Average
               <br/>
+        <br/>
           <button type="button" class="btn btn-primary white">{movies.vote_average}/10 </button> &nbsp;<img class="staricon" src="https://www.flaticon.com/svg/static/icons/svg/929/929424.svg" alt="star"/>
           <br/>
             </div>
