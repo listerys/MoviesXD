@@ -47,12 +47,16 @@ const MoviePage = (props) => {
 
     return (
         <div className = "posterContainer">
+          <div class="backdropContainer">
+          <img className="backdropImg" src={IMG_API + movies.backdrop_path} alt={movies.title}/>
+          </div>
             <div class="row">
   <div class="col-4">
   <br/>
   <img src= {IMG_API + movies.poster_path} alt={movies.title}/>
   </div>
   <div class="col-8">
+    <br/>
   <h1>{movies.title}</h1>
   Year Released: {movies.release_date}
 
@@ -70,9 +74,12 @@ const MoviePage = (props) => {
           <br/>
             </div>
 
-  </div>        <h1 className="CastName"> <br/>Cast</h1> 
+  </div>       
+  <div class="cast-container">
+   <h1 className="CastName"> <br/>Cast</h1> 
           <div className="movie-container">
           {credits.length > 0 && credits.map((movie) => <Cast key={movie.cast_id} {...movie} />   )}
+          </div>
           </div>
 </div>
 <h1>Similar Movies</h1>
