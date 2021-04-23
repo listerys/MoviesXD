@@ -65,7 +65,7 @@ const MoviePage = (props) => {
           <div className="Overview">{movies.overview}</div>
 
           <br/>
-          Total Movie Budget: {movies.budget}
+          Total Movie Budget: USD {movies.budget}
           <br/>
           <div className="ratingButton">
               Total Vote Average
